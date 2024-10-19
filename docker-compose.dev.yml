@@ -8,7 +8,7 @@ services:
     volumes:
       - ./:/var/www
     ports:
-      - "8093:80"
+      - "8080:80"
     links:
       - app
     networks:
@@ -57,6 +57,8 @@ services:
     environment:
       - "MYSQL_ROOT_PASSWORD=secret"
       - "MYSQL_DATABASE=handle_backend"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
     ports:
       - "33065:3306"
     networks:
@@ -67,7 +69,7 @@ services:
     links:
       - database
     ports:
-      - "8094:80"
+      - "8081:80"
     environment:
       - "PMA_HOST=database"
       - "PMA_USER=root"

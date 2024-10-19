@@ -57,6 +57,7 @@ Thumbs.db
 /storage/*.key
 /storage/pail
 /vendor
+/data
 .env
 .env.backup
 .env.production
